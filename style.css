@@ -46,6 +46,9 @@ body {
     width: auto;
     padding: 40px;
     flex-direction: column;
+    border: 3px solid rgb(255, 0, 0); 
+    border-radius: 60px;
+    padding: 20px;
 }
 
 #greeting div {
@@ -55,14 +58,20 @@ body {
 #works {
     height: auto;
     width: auto;
-    padding: 10px;
+    padding: 40px;
 }
 
 #photoshops {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     height: auto;
     width: auto;
+}
+
+.pic:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease;
 }
 
 #contact {
@@ -70,6 +79,8 @@ body {
     width: auto;
     padding: 20px;
     background-color: #000000;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, yellow 33%, red 33% 66%, blue 66%) 1;
 }
 
 h1 {
@@ -83,7 +94,7 @@ h2 {
 }
 
 h4 {
-    color: red;
+    color: yellow;
     font-size: 16px;
 }
 
