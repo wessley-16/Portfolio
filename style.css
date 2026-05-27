@@ -52,7 +52,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 560px;
+    height: auto;
     margin: 20px 20px;
 }
 
@@ -221,14 +221,7 @@ p {
     align-items: center;
     gap: 18px;
 }
-@media (min-width: 640px) {
-    .site-footer .footer-inner {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-    }
-}
+
 .footer-brand h2 { color: #ffffff; margin: 0; }
 .footer-brand p { color: #bdbdbd; margin: 4px 0 0; }
 .social { display: flex; gap: 12px; }
@@ -274,3 +267,52 @@ p {
 .next2:hover { background-color: rgba(0, 0, 0, 0.8); }
 .demo2 { opacity: 0.6; }
 .demo2:hover, .demo2.active { opacity: 1; }
+
+@media (max-width: 1199px) and (min-width: 641px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+    #profile-pic {
+        width: 50%;
+        height: auto;
+    }
+    #greeting {
+        width: 90%;
+        margin: 20px 0;
+    }
+    .site-footer .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+    #profile-pic {
+        width: 70%;
+        height: auto;
+    }
+    #greeting {
+        width: 100%;
+        margin: 20px 0;
+    }
+    h1 {
+    font-size: 48px;
+    }
+
+    h2 {
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    h4 {
+        color: yellow;
+        font-size: 12px;
+    }
+}
