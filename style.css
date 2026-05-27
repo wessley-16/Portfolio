@@ -221,7 +221,14 @@ p {
     align-items: center;
     gap: 18px;
 }
-
+@media (min-width: 640px) {
+    .site-footer .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
 .footer-brand h2 { color: #ffffff; margin: 0; }
 .footer-brand p { color: #bdbdbd; margin: 4px 0 0; }
 .social { display: flex; gap: 12px; }
@@ -280,12 +287,6 @@ p {
     #greeting {
         width: 90%;
         margin: 20px 0;
-    }
-    .site-footer .footer-inner {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
     }
 }
 
