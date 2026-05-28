@@ -92,7 +92,7 @@ body {
 }
 
 #carousel2-content {
-    width: 80%;
+    width: 30%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -279,8 +279,8 @@ p {
 .next2 {
   cursor: pointer;
   position: absolute;
-  top: 40%;
-  transform: translateY(-40%);
+  top: 25%;
+  transform: translateY(-25%);
   width: auto;
   padding: 16px;
   color: white;
@@ -313,7 +313,12 @@ p {
         margin: 20px 0;
     }
     #carousel2-content {
-        width: 70%;
+        width: 50%;
+    }
+    .prev2,
+    .next2 {
+    top: 30%;
+    transform: translateY(-30%);
     }
 }
 
@@ -332,6 +337,14 @@ p {
     #greeting {
         width: 100%;
         margin: 20px 0;
+    }
+    #carousel2-content {
+        width: 70%;
+    }
+    .prev2,
+    .next2 {
+    top: 35%;
+    transform: translateY(-35%);
     }
     h1 {
     font-size: 48px;
