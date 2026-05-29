@@ -2,7 +2,9 @@ body {
     background-color: #000000;
     font-family: "Segoe UI", Arial, sans-serif;
     width: 100vw;
+    max-width: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* Navigation bar styles */
@@ -99,15 +101,13 @@ body {
 }
 
 #photoshops {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
 }
 
 .pic {
-    height: 400px;
+    height: 300px;
     width: auto;
     margin: 1px;
 }
