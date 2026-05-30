@@ -34,15 +34,15 @@ body {
 }
 
 .btn-download {
-  padding: 8px;
-  text-decoration: none;
-  display: inline-block;
-  font-family: "Segoe UI", Arial, sans-serif;
-  transition: background 0.3s ease;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Segoe UI", Arial, sans-serif;
+    transition: background 0.3s ease;
 }
 
 .btn-download:hover {
-  border-bottom: 3px solid yellow;
+    border-bottom: 5px solid yellow;
 }
 
 
@@ -100,19 +100,46 @@ body {
 
 #photoshops {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 8px;
 }
 
 .pic {
-    height: 300px;
+    height: 250px;
     width: auto;
     margin: 1px;
 }
 
 .pic:hover {
-    transform: scale(1.25);
+    transform: scale(1.3);
     transition: transform 0.5s ease;
+}
+
+#mini-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.mini-proj-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 8px;
+    background-color: rgb(21, 122, 255);
+    color: white;
+    font: 20px bold "Segoe UI", Arial, sans-serif;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.mini-proj-btn:hover {
+    transition: transform 0.3s ease, background-color 0.5s ease;
+    transform: translateY(-4px) scale(1.05);
+    background-color: rgb(19, 19, 255);
 }
 
 #contact {
@@ -272,6 +299,7 @@ p {
     color: #cfcfcf;
     padding: 36px 20px 20px;
 }
+
 .site-footer .footer-inner {
     max-width: 1000px;
     margin: 0 auto;
@@ -280,6 +308,7 @@ p {
     align-items: center;
     gap: 18px;
 }
+
 @media (min-width: 640px) {
     .site-footer .footer-inner {
         flex-direction: row;
@@ -288,6 +317,7 @@ p {
         padding: 0 20px;
     }
 }
+
 .footer-brand h2 { color: #ffffff; margin: 0; }
 .footer-brand p { color: #bdbdbd; margin: 4px 0 0; }
 .social { display: flex; gap: 12px; }

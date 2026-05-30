@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CPU Scheduling Program</h1>
+    <form id="schedulerForm">
+        <label>How many processes?</label>
+        <input type="number" id="processCount"><br><br>
+
+        <label>Burst Times (space separated):</label>
+        <input type="text" id="burstTime"><br><br>
+
+        <label>Arrival Times (space separated):</label>
+        <input type="text" id="arrivalTime"><br><br>
+
+        <label>Priorities (space separated):</label>
+        <input type="text" id="priority"><br><br>
+
+        <label>Quantum Time (Round Robin):</label>
+        <input type="number" id="timeQuantum"><br><br>
+    </form>
+
+    <div id="menu">
+        <button type="button" onclick="runFCFS()">FCFS</button>
+        <button type="button" onclick="runSJF()">SJF</button>
+        <button type="button" onclick="runSRTF()">SRTF</button>
+        <button type="button" onclick="runPriority()">Priority</button>
+        <button type="button" onclick="runRR()">Round-Robin</button>
+    </div>
+
+    <h2>Process Table</h2>
+    <table border="1" id="resultTable">
+        <thead>
+            <tr>
+                <th>Process</th>
+                <th>Arrival</th>
+                <th>Burst</th>
+                <th>Priority</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Gantt Chart</h2>
+    <div id="ganttChart"></div>
+
+    <div id="results">
+        <div style="display: flex; flex-direction: column; align-items: right;">
+            <h2>Turnaround Time = TF - TA</h2>
+            <div id="computationResults1"></div>
+            <h4>Average Turnaround Time: <span id="avgTurnaroundTime">0</span></h4>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: right;">
+            <h2>Waiting Time = TAT - BT</h2>
+            <div id="computationResults2"></div>
+            <h4>Average Waiting Time: <span id="avgWaitingTime">0</span></h4>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
