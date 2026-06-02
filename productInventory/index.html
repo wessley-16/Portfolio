@@ -10,19 +10,23 @@
     <div class="container">
         <h1>Product Inventory Manager</h1>
         <form id="inventoryForm">
-            <label>Product Name:</label>
-            <input type="text" id="productName"><br><br>
+            <div id="form-group">
+                <label>Product Name:</label>
+                <input type="text" id="productName"><br><br>
 
-            <label>Quantity:</label>
-            <input type="number" id="quantity"><br><br>
+                <label>Quantity:</label>
+                <input type="number" id="quantity"><br><br>
 
-            <label>Price:</label>
-            <input type="number" id="price" step="0.01"><br><br>
+                <label>Price:</label>
+                <input type="number" id="price" step="0.01"><br><br>
+            </div>
 
-            <button type="button" onclick="addProduct()">Add Item</button>
-            <button type="button" onclick="deleteProduct()">Delete Item</button>
-            <button type="button" onclick="updateProduct()">Update Item</button>
-            <button type="button" onclick="searchProduct()">Search Item</button>
+            <div id="buttonGroup">
+                <button type="button" onclick="addProduct()">Add Item</button>
+                <button type="button" onclick="deleteProduct()">Delete Item</button>
+                <button type="button" onclick="updateProduct()">Update Item</button>
+                <button type="button" onclick="searchProduct()">Search Item</button>
+            </div>
         </form>
 
         <div class="search-results" id="searchResultsContainer">

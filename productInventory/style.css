@@ -7,7 +7,7 @@ body {
 
 #inventoryForm {
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
@@ -25,6 +25,20 @@ body {
     border-collapse: collapse;
     width: 80%;
     margin: 20px auto;
+}
+
+#form-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+#buttonGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
 
 .search-results {
@@ -70,4 +84,56 @@ button.close-search:hover {
 
 button:hover {
     background-color: #004792;
+}
+
+@media (max-width: 1200px) and (min-width: 641px) {
+    #inventoryForm {
+        flex-direction: column;
+    }
+
+    #inventoryTable, #hiddenSearchTable {
+        width: 90%;
+    }
+
+    button {
+        margin: 10px 0;
+    }
+
+    #form-group {
+        flex-direction: row;
+        gap: 0 10px;
+    }
+
+    #buttonGroup {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (max-width: 860px) {
+    #form-group {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    #inventoryForm {
+        flex-direction: column;
+    }
+
+    #inventoryTable, #hiddenSearchTable {
+        width: 100%;
+    }
+
+    button {
+        margin: 10px 0;
+    }
+
+    #buttonGroup {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
