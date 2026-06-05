@@ -414,6 +414,10 @@ p {
     top: 35%;
     transform: translateY(-35%);
     }
+    .pic {
+        width: 100%;
+        height: auto;
+    }
     h1 {
     font-size: 48px;
     }
