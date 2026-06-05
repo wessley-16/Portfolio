@@ -99,10 +99,11 @@ body {
 }
 
 #photoshops {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
 .pic {
