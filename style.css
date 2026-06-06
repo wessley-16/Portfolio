@@ -58,6 +58,8 @@ body {
 #profile-pic-container {
     height: 540px;
     margin: 5px 30px;
+    display: flex;
+    justify-content: center;
 }
 
 #profile-pic-shape {
@@ -422,6 +424,7 @@ p {
     }
     #profile-pic-container {
         height: auto;
+        width: 90%;
     }
     #greeting {
         width: 100%;
