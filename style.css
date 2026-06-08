@@ -50,13 +50,18 @@ body {
 
 
 /* Section styles */
-#about {
+#hero-section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    height: auto;
-    margin: 20px 20px;
+    justify-content: space-around;
+    height: 90vh;
+    padding: 0 20px;
+}
+
+#hero-title {
+    display: flex;
+    flex-direction: column;
 }
 
 #profile-pic-container {
@@ -68,42 +73,55 @@ body {
 
 #profile-pic-shape {
     width: 400px;
-    height: 450px;
-    transform: rotate(8deg);
+    height: 500px;
+    transform: rotate(6deg);
     background-color: #e90000;
     border-radius: 12px;
     z-index: 0;
 }
 
+#profile-pic-shape:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
 #profile-pic-shape2 {
     width: 400px;
-    height: 450px;
-    transform: rotate(6deg);
+    height: 500px;
+    transform: rotate(-3deg);
     background-color: #FFD600;
     border-radius: 12px;
     z-index: 1;
 }
 
 #profile-pic {
-    height: 450px;
+    height: 500px;
     width: auto;
-    margin: 0 30px;
-    transform: rotate(-14deg);
+    transform: rotate(-4deg);
     border-radius: 12px;
     border: 4px solid #000000;
     z-index: 2;
 }
 
-#greeting {
-    width: auto;
-    flex-direction: column;
-    margin: 10px 20px;
+#about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, #FFD600 60%, #e90000 60% 80%, #0000ff 80%) 1;
+}
+
+#sub-greeting1 {
+    width: 45%;
+    margin: 40px 20px;
     padding: 20px;
 }
 
-#sub-greeting {
-    margin-bottom: 30px;
-    padding-left: 10px;
+#sub-greeting2 {
+    width: 55%;
+    margin: 40px 20px;
+    padding: 20px;
     border-left: 3px solid #e90000; 
 }
 
@@ -112,7 +130,7 @@ body {
     width: auto;
     padding: 40px;
     border-top: 4px solid transparent;
-    border-image: linear-gradient(to right, #FFD600 60%, #e90000 60% 80%, #0000ff 80%) 1;
+    border-image: linear-gradient(to right, #FFD600 20%, #e90000 20% 80%, #0000ff 80%) 1;
 }
 
 #carousel2-content {
@@ -180,7 +198,8 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 64px;
+    font-size: 96px;
+    line-height: 1;
 }
 
 h2 {
@@ -191,6 +210,7 @@ h2 {
 h4 {
     color: #FFD600;
     font-size: 16px;
+    line-height: 1;
 }
 
 p { 
@@ -393,22 +413,41 @@ p {
 
 @media (max-width: 1199px) and (min-width: 641px) {
     #about {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
     #profile-pic {
-        width: 80%;
+        width: 100%;
         height: auto;
     }
     #profile-pic-container {
         height: auto;
+        width: 55%;
+        margin: 10px 0;
+        padding: 10px 0;
     }
-    #greeting {
-        width: 90%;
+    #profile-pic-shape {
+        width: 70%;
+        height: 70%;
+    }
+    #profile-pic-shape2 {
+        width: 100%;
+        height: 100%;
+    }
+    #hero-title {
+        width: 45%;
         margin: 20px 0;
     }
     #carousel2-content {
         width: 50%;
+    }
+    h1 {
+        font-size: 72px;
+        line-height: 1;
+    }
+    h4 {
+        font-size: 12px;
+        line-height: 1;
     }
     .prev2,
     .next2 {
@@ -418,9 +457,17 @@ p {
 }
 
 @media (max-width: 640px) {
-    #about {
-        flex-direction: column;
+    #hero-section {
+        flex-direction: column-reverse;
+        justify-content: center;
         text-align: center;
+        height: auto;
+    }
+    #about {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
     #profile-pic {
         width: 80%;
@@ -429,10 +476,30 @@ p {
     #profile-pic-container {
         height: auto;
         width: 90%;
+        margin: 20px auto;
     }
-    #greeting {
+    #profile-pic-shape {
+        width: 70%;
+        height: 70%;
+    }
+    #profile-pic-shape2 {
+        width: 100%;
+        height: 100%;
+    }
+    #hero-title {
         width: 100%;
         margin: 20px 0;
+    }
+    #sub-greeting1 {
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    #sub-greeting2 {
+        width: 80%;
+        margin: 10px 0;
+        padding: 10px;
+        border-left: 0px; 
     }
     #carousel2-content {
         width: 70%;
